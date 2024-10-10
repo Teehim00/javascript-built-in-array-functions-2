@@ -1,5 +1,12 @@
+
+// เหมือนที่เรียนตอนเช้า
+// แปลงเป็น string
+// reverse
+// เรียงกันแล้วเทียบกับของเก่า 
 function isPalindrome(string) {
   // Start coding here
+  let reversetext = string.split("").reverse().join("");
+  return reversetext === string
 }
 
 //Example case

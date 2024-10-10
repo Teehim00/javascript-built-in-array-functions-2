@@ -372,7 +372,14 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-
+// เลือกเฉพาะรายการสั่งซื้อสินค้าที่มีข้อมูลสมาชิกเท่านั้น
+// สมาชิกคือ member ซึ่ง member อยู่ array bills ต้อง bills["member"]
+// ค้นหาใช้ .filter
 // Start coding here
-
-const newBills;
+/*function newBills(bills){
+  let addNewbills =  bills.filter(bill=>bill["member"] !== null);
+  return addNewbills
+}
+console.log(newBills(bills))*/
+const newBills = bills.filter(bill=>bill["member"] !== null);
+console.log (newBills)

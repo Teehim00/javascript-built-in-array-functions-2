@@ -372,6 +372,19 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-
+//ต้องการเห็นเฉพาะชื่อสมาชิกจากรายการสั่งซื้อสินค้าทั้งหมด
+//1.ต้องหาคนที่เป็นสมาชิกก่อน**เอาจากข้อก่อนหน้านี้ได้
+//2.วนรูป เอาชื่อออกมา จาก bill ["member"] ["name"]
 // Start coding here
-const billMembers;
+
+/*function billMembers(bills){
+  let billMembers =  bills.filter(bill=>bill["member"] !== null).map(bill=>bill["member"]["name"]);
+  console.log (addNewbills)
+  let news = addNewbills.map(bill=>bill["member"]["name"])
+  console.log (addNewbills)
+  return billMembers
+}
+console.log(billMembers(bills))*/
+
+const billMembers =  bills.filter(bill=>bill["member"] !== null).map(bill=>bill["member"]["name"]);
+console.log(billMembers)
