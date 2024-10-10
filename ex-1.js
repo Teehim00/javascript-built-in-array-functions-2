@@ -372,5 +372,11 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-
+// หาผล รวมของ total ---- ใช้ .reduce
 // Start coding here
+function totalbills (bills){
+  let result = bills.reduce((acc, cur) => acc+ cur.total, 0);
+  return result
+}
+
+console.log(`Total bill transaction is ${totalbills(bills)}`)

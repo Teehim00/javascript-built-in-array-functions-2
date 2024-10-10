@@ -373,6 +373,19 @@ const bills = [
     },
 ];
 
-// Start coding here
+//1 ต้องเข้าถึง bills.location
+//2.แยกแต่ละจังหวัด
+//3ได้แต่ละจังหวัดแล้ว เอา bills.total มาบวกกัน
 
-const totalPaidByLocation;
+// Start coding here
+function totalPaidByLocation(bills) {
+    return bills.reduce((acc, bill) => {
+      if (!acc[bill.location]) {
+        acc[bill.location] = 0;
+      }
+      acc[bill.location] += bill.total;
+      return acc;
+    }, {});
+  }
+
+console.log(totalPaidByLocation (bills));
