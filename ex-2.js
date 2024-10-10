@@ -374,5 +374,9 @@ const bills = [
 ];
 
 // Start coding here
-
-const newBills;
+// 15
+function fillterNoMember(bills) {
+  return bills.filter((bill) => bill.member !== null);
+}
+const newBills = fillterNoMember(bills);
+console.log(newBills);
